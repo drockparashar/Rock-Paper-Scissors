@@ -5,6 +5,9 @@ const paper=document.querySelector(".paper")
 const scissors=document.querySelector(".scissors")
 const descision=document.getElementById("decision")
 const win=document.getElementById("win")
+const winAudio= new Audio("win.wav")
+const looseAudio=new Audio("loose.mp3")
+const drawAudio=new Audio("draw.mp3")
 let user=0
 let comp=0
 
@@ -53,6 +56,7 @@ function game( userChoice)
             compScore.textContent=comp
             userScore.textContent=user
             win.textContent="User Wins"
+            winAudio.play()
             break;
         
         case "rp":
@@ -62,6 +66,7 @@ function game( userChoice)
                 userScore.textContent=user
                 compScore.textContent=comp
                 win.textContent="Computer Wins"
+                looseAudio.play()
                 break;
         
         case "pp":
@@ -70,6 +75,7 @@ function game( userChoice)
                 userScore.textContent=user
                 compScore.textContent=comp
                 win.textContent="Draw"
+                drawAudio.play()
                 break;
                 
         
