@@ -91,3 +91,14 @@ h5
     margin: 20px;
 }
 
+@media(max-width:433px)
+{
+    .choices
+    {
+        display: flex;
+    }
+    .scoreboard
+    {
+        margin: 30px 25%;
+    }
+}
